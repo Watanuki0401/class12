@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+}
+
+a {
+  color: #F0E9D2;
+  text-decoration: none;
+}
+
+section{
+  position: absolute;
+}
+
+.Menu {
+  position: sticky;
+  user-select: none;
+  z-index: 9999;
+}
+
+.menuBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181D31;
+  padding: 10px 15px;
+}
+
+.menuBar__logo {
+  font-size: 24px;
+  color: #E6DDC4;
+}
+
+.menuBar__menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menuBar__menu li {
+  padding: 10px 15px;
+}
+
+.menuBar__menu li:hover {
+  background-color: #696969;
+  border-radius: 3px;
+}
+
+.menuBar__links {
+  list-style: none;
+  color: #E6DDC4;
+  display: flex;
+  padding: 0;
+}
+
+.menuBar__links li {
+  padding: 10px 15px;
+}
+
+.menuBar__list {
+  display: none;
+  position: absolute;
+  right: 30px;
+  font-size: 24px;
+  color: #e1a75a;
+}
+
+@media screen and (max-width:600px) {
+  .menuBar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .menuBar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .menuBar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menuBar__links {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menuBar__list {
+    display: block;
+  }
+
+  .menuBar__menu.active,
+  .menuBar__links.active {
+    display: flex;
+  }
+}
